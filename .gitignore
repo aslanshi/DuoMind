@@ -1,0 +1,5 @@
+test_openai_sdk.ipynb
+.env
+/chroma
+.DS_Store
+photo_caption_mapping.json
