@@ -1,4 +1,5 @@
 test_openai_sdk.ipynb
+test_azure_api.ipynb
 .env
 /chroma
 .DS_Store
