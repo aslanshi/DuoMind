@@ -4,3 +4,4 @@ test_azure_api.ipynb
 /chroma
 .DS_Store
 photo_caption_mapping.json
+__pycache__/
