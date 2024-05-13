@@ -11,8 +11,6 @@ from langchain_community.chat_models import ChatOpenAI, AzureChatOpenAI
 from langchain.utils.openai_functions import convert_pydantic_to_openai_function
 
 from LLM_CONFIG import (
-    API_URL,
-    MODEL_NAME,
     AZURE_API_URL,
     AUZRE_API_VERSION,
     AZURE_DEPLOY_NAME,
@@ -93,7 +91,7 @@ if prompt := st.chat_input():
     result = azure_model.invoke(prompt, functions=[convert_pydantic_to_openai_function(RetrieveImage)])
     
     stream_response = azure_oa_client.chat.completions.create(
-        model=MODEL_NAME,
+        model="gpt-4", # or AZURE_DEPLOY_NAME or not needed
         messages=[system_prompt] + mask_extra_property(st.session_state.messages), # prepend system message but not showing in the app
         stream=True
     )
